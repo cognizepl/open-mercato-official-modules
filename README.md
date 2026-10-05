@@ -108,6 +108,7 @@ yarn platform:sync --check
 | Package | Description | Author |
 |---------|-------------|--------|
 | [`@open-mercato/carrier-inpost`](packages/carrier-inpost) | InPost shipping carrier — rate calculation, shipment creation, cancellation, and webhook tracking for InPost locker and courier services (Poland) | Open Mercato |
+| [`@open-mercato/gus-regon`](packages/gus-regon) | GUS REGON company lookup — autofill Polish company name and registered address by NIP from the official registry (BIR1), configured per organization in Integrations | [Cognize](https://cognize.pl) |
 
 ## ⚡ Installing a Module
 

@@ -1,0 +1,100 @@
+{
+  "name": "@open-mercato/gus-regon",
+  "version": "0.0.0",
+  "type": "module",
+  "license": "MIT",
+  "description": "GUS REGON (BIR1) company lookup for Open Mercato — autofill Polish company name and registered address by NIP.",
+  "main": "./dist/index.js",
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "node build.mjs",
+    "prepack": "node build.mjs",
+    "watch": "node watch.mjs",
+    "test": "jest --config jest.config.cjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./*.ts": {
+      "types": "./src/*.ts",
+      "default": "./dist/*.js"
+    },
+    "./*.tsx": {
+      "types": "./src/*.tsx",
+      "default": "./dist/*.js"
+    },
+    "./*.json": "./src/*.json",
+    "./*": {
+      "types": [
+        "./src/*.ts",
+        "./src/*.tsx"
+      ],
+      "default": "./dist/*.js"
+    },
+    "./*/*.json": "./src/*/*.json",
+    "./*/*": {
+      "types": [
+        "./src/*/*.ts",
+        "./src/*/*.tsx"
+      ],
+      "default": "./dist/*/*.js"
+    },
+    "./*/*/*.json": "./src/*/*/*.json",
+    "./*/*/*": {
+      "types": [
+        "./src/*/*/*.ts",
+        "./src/*/*/*.tsx"
+      ],
+      "default": "./dist/*/*/*.js"
+    },
+    "./*/*/*/*.json": "./src/*/*/*/*.json",
+    "./*/*/*/*": {
+      "types": [
+        "./src/*/*/*/*.ts",
+        "./src/*/*/*/*.tsx"
+      ],
+      "default": "./dist/*/*/*/*.js"
+    }
+  },
+  "keywords": [
+    "open-mercato",
+    "gus",
+    "regon",
+    "bir",
+    "nip",
+    "poland",
+    "company-lookup"
+  ],
+  "dependencies": {
+    "fast-xml-parser": "^5.11.2"
+  },
+  "peerDependencies": {
+    "@open-mercato/core": "^0.6.0",
+    "@open-mercato/shared": "^0.6.0",
+    "@open-mercato/ui": "^0.6.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@open-mercato/core": "0.6.3-develop.3778.1.25fdb35f2e",
+    "@open-mercato/shared": "0.6.3-develop.3778.1.25fdb35f2e",
+    "@open-mercato/ui": "0.6.3-develop.3778.1.25fdb35f2e",
+    "@playwright/test": "^1.58.2",
+    "@types/jest": "^30.0.0",
+    "esbuild": "^0.25.0",
+    "glob": "^13.0.6",
+    "jest": "^30.2.0",
+    "react": "19.2.1",
+    "react-dom": "19.2.1",
+    "ts-jest": "^29.4.6",
+    "typescript": "^5.9.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
